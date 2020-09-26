@@ -1,8 +1,8 @@
 class Human{
-  constructor(config) {
-        this.name = config.name;
-        this.surname = config.surname;
-        this.age = config.age;
+  constructor({name, surname, age}) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
     }
 
     getFullName() {
@@ -19,9 +19,9 @@ class Human{
 
 class Student extends Human{
 
-  constructor(config) {
-        super(config);
-        this.marks = config.marks;
+  constructor({name, surname, age, marks}) {
+        super({name, surname, age});
+        this.marks = marks;
     }
 
     getFullName() {
@@ -47,9 +47,9 @@ class Student extends Human{
 
 class Teacher extends Human{
 
-  constructor(config) {
-        super(config);
-        this.group = config.group;
+  constructor({name, surname, age, group}) {
+        super({name, surname, age});
+        this.group = group;
     }
 
     getListOfNamesByAverageMark(){ 
