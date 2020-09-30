@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 16</title>
+
+    <link rel="stylesheet" href="style/style.css" media="all" >
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    
+  
+</head>
+<body>
+	<div class="wrapper">
+	    <div class="left">
+
+	    	<h4>Форма регистрации нового студента </h4>
+
+	    	<form id='fill-out-form'>
+               
+               <div class="form-group">
+                  <label for="name">Имя студента</label>
+                  <input class="form-control" type="text"  id = 'name'>
+               </div>
+               <div class="form-group">
+                  <label for="surname">Фамилия студента</label>
+                  <input class="form-control" type="text"  id = 'surname'>
+               </div>
+               <div class="form-group">
+                  <label for="age">Возраст студента</label>
+                  <input class="form-control" type="text"  id = 'age'>
+               </div>
+               <div class="form-group">
+                  <label for="marks">Оценки студента</label>
+                  <input class="form-control" type="text"  id = 'marks'>
+               </div>
+ 
+               <button type="submit" class="btn btn-primary" id="add">Добавить</button>
+           </form>
+
+
+
+
+	    </div>
+	    <div class="right">
+
+	    	<h4>Список группы</h4>
+
+	    	 <div class="container">
+                 <div class="list-block">
+                     <ol class="list" id="list"></ol>
+                     <button class="btn btn-primary" id="update">Обновить</button>
+        </div>
+      </div>
+	    	
+	    	
+	    </div>
+	</div>
+
+	
+	<script type="text/javascript" src="js/script.js"> </script>
+</body>
+</html>	
+
+
+

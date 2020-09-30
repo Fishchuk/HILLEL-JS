@@ -1,0 +1,41 @@
+body {
+    
+    font-family: "Arial", sans-serif;
+	
+	
+	    
+}
+
+.wrapper {
+	width: 1200px;
+	margin: 0 auto;
+	background-color: #696969;
+	min-height: 960px;
+	padding: 25px;
+
+}
+
+.left {
+	width: 50%;
+	float: left;
+	background-color: #D3D3D3;
+	min-height: 910px;
+
+
+}
+.right {
+	width: 50%;
+	float: right;
+	background-color: #D3D3D3;
+	border-left: 2px solid black;
+	min-height: 910px;
+}
+
+#fill-out-form{
+	margin: 25px;
+}
+
+h4{
+	text-align: center;
+	color: #0000FF; 
+}
