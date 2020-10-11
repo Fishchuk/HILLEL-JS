@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 16</title>
+
+    <link rel="stylesheet" href="style/style.css" media="all" >
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    
+  
+</head>
+<body>
+	<div class="wrapper">
+	    <div class="left">
+
+	    	<h4>Форма регистрации нового студента </h4>
+
+	    	<form id='fill-out-form'>
+               
+               <div class="form-group">
+                  <label for="name">Имя студента</label>
+                  <input class="form-control" type="text"  id = 'name'>
+               </div>
+               <div class="form-group">
+                  <label for="surname">Фамилия студента</label>
+                  <input class="form-control" type="text"  id = 'surname'>
+               </div>
+               <div class="form-group">
+                  <label for="age">Возраст студента</label>
+                  <input class="form-control" type="text"  id = 'age'>
+               </div>
+               
+               	 
+           	    <div class="form-group">
+                   <label for="mark1">Первая оценка</label>
+                   <input class="form-control" type="number"  id = 'mark1' value="1" min="1" max="10" required>
+                </div>
+                <div class="form-group">
+                   <label for="mark2">Вторая оценка</label>
+                   <input class="form-control" type="number"  id = 'mark2' value="1" min="1" max="10" required>
+                </div>
+                <div class="form-group">
+                   <label for="mark3">Третья оценка</label>
+                   <input class="form-control" type="number"  id = 'mark3' value="1" min="1" max="10" required>
+                </div>
+                <div class="form-group">
+                   <label for="mark4">Четвертая оценка</label>
+                   <input class="form-control" type="number"  id = 'mark4' value="1" min="1" max="10" required>
+                </div>
+                <div class="form-group">
+                   <label for="mark5">Пятая оценка</label>
+                   <input class="form-control" type="number"  id = 'mark5' value="1" min="1" max="10" required>
+                </div>
+           	
+                        
+           </form>
+           
+           <div>
+           	   <button  class="btn btn-primary" id="add">Добавить</button>
+           	
+           </div>
+
+
+
+
+	    </div>
+	    <div class="right">
+
+	    	<h4>Список группы</h4>
+
+	    	 <div class="container">
+                 <div class="list-block">
+                     <ol class="list" id="list"></ol>
+                     
+                 </div>
+                 <div>
+                 	<button class="btn btn-primary" id="update">Обновить</button> 
+                 </div>
+             </div>
+	    	
+	    	
+	    </div>
+	</div>
+
+	
+	<script type="text/javascript" src="js/script.js"> </script>
+</body>
+</html>	
+
+
+
