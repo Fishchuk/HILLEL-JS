@@ -25,18 +25,12 @@ class Human{
   constructor({name, surname, age, marks}) {
         super({name, surname, age});
         
-        this.mark1 = mark1;
-        this.mark2 = mark2;
-        this.mark3 = mark3;
-        this.mark4 = mark4;
-        this.mark5 = mark5;
+        this.mark = mark;
 
     }
 
     averageMark() {
-        let sum = this.mark1 + this.mark2 + this.mark3 + this.mark4 + this.mark5;
-        let result = sum / 5;
-        return result;
+        return Math.round(this.mark.reduce( (acc, item) => acc += item, 0) / this.mark.length);
   }
   
     minMark(){
@@ -98,6 +92,10 @@ class Teacher extends Human{
 function init() {
   let add = document.querySelector('#add');
   let update = document.querySelector('#update');
+  let fillOutForm = document.querySelector('.fill-out-form');
+  let list = document.querySelector('.list'); 
+  let arrStudents = Array.from(fillOutForm.elements);
+
   let errorSpan = document.createElement('span');
   errorSpan.classList.add('message');
   
@@ -109,14 +107,15 @@ function init() {
       let studentName = document.querySelector('#name');
       let studentSurname = document.querySelector('#surname');
       let studentAge = document.querySelector('#age');
-      let studentMark1 = document.querySelector('#mark1');
-      let studentMark2 = document.querySelector('#mark2');
-      let studentMark3 = document.querySelector('#mark3');
-      let studentMark4 = document.querySelector('#mark4');
-      let studentMark5 = document.querySelector('#mark5');
-      console.log('validate - ', validateFormOnRequired(studentMark1,studentMark2,studentMark3,studentMark4,studentMark5));
+      let studentMarks = arrStudents.reduce((pre, cur) => cur.name === "mark" ?
+                pre += cur.value + ' ' : pre += '', '');
+
       
-      if(!validateFormOnRequired(studentMark1,studentMark2,studentMark3,studentMark4,studentMark5)) {
+
+      
+      console.log('validate - ', validateFormOnRequired(arrStudents));
+      
+      if(!validateFormOnRequired(arrStudents)) {
             errorSpan.classList.add('error');
             errorSpan.textContent = 'Поставьте корректную оценку';
             fillOutForm.append(errorSpan);
@@ -128,13 +127,13 @@ function init() {
       let name = studentName.value,
           surname = studentSurname.value,
           age = studentAge.value,
-          marks = [studentMark1.value,studentMark2.value,studentMark3.value,studentMark4.value,studentMark5.value];
-
+          marks = studentMarks.trim().split(' ').map((item) => Number.parseInt(item));
+          
       let createStudent = new Student({
           name,
           surname,
           age: +age,
-          marks, 
+          mark: marks, 
       
       }) 
 
@@ -143,11 +142,7 @@ function init() {
       studentName.value = '';
       studentSurname.value = '';
       studentAge.value = '';
-      studentMark1.value = ''; 
-      studentMark2.value = '';
-      studentMark3.value = '';
-      studentMark4.value = '';
-      studentMark5.value = ''; 
+      
   }
 
   update.onclick = function(){
