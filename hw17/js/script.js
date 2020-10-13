@@ -116,7 +116,7 @@ function init() {
       let studentMark5 = document.querySelector('#mark5');
       console.log('validate - ', validateFormOnRequired(studentMark1,studentMark2,studentMark3,studentMark4,studentMark5));
       
-      if(!validateFormOnRequired(elementsForms)) {
+      if(!validateFormOnRequired(studentMark1,studentMark2,studentMark3,studentMark4,studentMark5)) {
             errorSpan.classList.add('error');
             errorSpan.textContent = 'Поставьте корректную оценку';
             fillOutForm.append(errorSpan);
