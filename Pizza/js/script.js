@@ -1,0 +1,20 @@
+let doOrder = document.querySelector('#order');
+let fillForOutForm = document.querySelector('#fill-for-order-pizza');
+let noOrder = document.querySelector('#no');
+let messageCancel = document.querySelector('#messageCancel');
+let yesOrder = document.querySelector('#yes');
+let cooking = document.querySelector('#cooking');
+let body = document.querySelector('body');
+let feedback = document.querySelector('#feedback');
+let like = document.querySelector('#like');
+let dislike = document.querySelector('#dislike');
+let checkboxElements = document.querySelectorAll('.checkbox');
+let errorMessage = document.querySelector('#alert');
+let radioValue = fillForOutForm.elements.size.value;
+let seafood = document.querySelector('#seafood');
+let prosciutto = document.querySelector('#prosciutto');
+let mozzarella = document.querySelector('#mozzarella');
+let olive = document.querySelector('#olive');
+let green = document.querySelector('#green');
+export{doOrder,noOrder,fillForOutForm,messageCancel,yesOrder,cooking,body,feedback,
+    like,dislike,checkboxElements,errorMessage,radioValue,seafood,prosciutto,mozzarella,olive,green};

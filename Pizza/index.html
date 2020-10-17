@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order pizza</title>
+
+    
+
+    <link rel="stylesheet" href="style/style.css" media="all" >
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    
+  
+</head>
+<body>
+	<div class="wrapper">
+	  <div class="conteiner">  
+
+	    	<h4>Форма заказа пиццы </h4>
+
+	    	<form  id='fill-for-order-pizza'>
+               
+               <div class="form-group">
+                  <label for="size">Маленькая</label>
+                  <input class="form-control" type="radio"  name = 'size' value="small">
+               </div>
+               <div class="form-group">
+                  <label for="size">Средняя</label>
+                  <input class="form-control" type="radio"  name = 'size' value="medium" checked>
+               </div>
+               <div class="form-group">
+                  <label for="size">Большая</label>
+                  <input class="form-control" type="radio"  name = 'size' value="big">
+               </div>
+               
+               	 
+           	    <div class="form-group">
+                   <label for="seafood">Морепродукты</label>
+                   <input class="form-control" type="checkbox" name="seafood" id="seafood">
+                </div>
+                <div class="form-group">
+                   <label for="prosciutto">Прошутто</label>
+                   <input class="form-control" type="checkbox" name="prosciutto" id="prosciutto">
+                </div>
+                <div class="form-group">
+                   <label for="mozzarella">Моцарелла</label>
+                   <input class="form-control" type="checkbox" name="mozzarella" id="mozzarella">
+                </div>
+                <div class="form-group">
+                   <label for="olive">Оливки</label>
+                   <input class="form-control" type="checkbox" name="olive" id="olive">  
+                </div>
+                <div class="form-group">
+                   <label for="green">Руккола</label>
+                   <input class="form-control" type="checkbox" name="green" id="green">
+                </div>
+                 
+                                        
+           </form>
+
+            <div class="alert alert-danger" role="alert"  id='alert'>
+                    Выберите как минимум 3 ингредиента для вашей пиццы
+            </div>
+  
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id='order'>
+              Заказать пиццу
+             </button>
+
+        
+          
+            <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ 
+
+              
+                <div class="modal-dialog" role="document">
+                   <div class="modal-content">
+                    <div class="modal-header">
+                       <h5 class="modal-title">Оплата</h5>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                       </button>
+                     </div>
+                     <div class="modal-body">
+                       <p>Готовы оплатить заказ?</p>
+                     </div>
+                     <div class="modal-footer">
+                       <button type="button" id="yes" class="btn btn-primary" data-dismiss="modal">Да</button>
+                       <button type="button" id="no"  class="btn btn-secondary" data-dismiss="modal">Нет</button>
+                     </div>
+                   </div>
+                 </div>
+              </div>
+               <div class="alertCancel alert-primary " role="alert" id='messageCancel' hidden>
+                 Вы отменили заказ
+              </div>
+              <div class="alert alert-primary textMessage" role="alert" id='cooking' hidden>
+                 Пицца готовится
+               </div>
+          
+
+           <div class="feedback" id ="feedback" hidden >
+                <p>Вам понравилась наша работа?</p>
+                <div class="agree">
+                   
+                  <button id="like">Да </button>
+                       
+                  <button id="dislike">Нет </button>
+                    
+                </div>
+           </div>
+           
+           
+
+
+
+      </div>
+     </div>
+
+     <script type='module' src="js/main.js"></script>
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+	</body>
+</html>	
+
+
+
